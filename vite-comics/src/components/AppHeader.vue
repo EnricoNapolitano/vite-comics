@@ -3,6 +3,7 @@ export default {
     name: 'AppHeader',
     data() {
         return {
+            // data structure of navbar in header
             nav: [
                 {
                     text: 'Characters',
@@ -63,6 +64,7 @@ export default {
 
 <template>
     <header class="container">
+        <!-- main navabar in header -->
         <nav>
             <figure><img src="../assets/img/dc-logo.png" alt="logo DC"></figure>
             <ul>
@@ -77,11 +79,11 @@ export default {
 
 nav {
     height: 120px;
-    @include flex-jsb-ac;
+    @include flex-jsb-ac; //display flex, justify content space between, align-itmes center
 }
 
 ul {
-    @include flex-jsb;
+    @include flex-jsb; //display flex, justify content space between
 }
 
 li {

@@ -76,10 +76,16 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partial/mixins.scss' as *;
+@use '../assets/scss/partial/variables.scss' as *;
 
 nav {
     height: 120px;
     @include flex-jsb-ac; //display flex, justify content space between, align-itmes center
+}
+
+figure {
+    width: 85px;
+    height: 85px;
 }
 
 ul {
@@ -91,6 +97,14 @@ li {
 }
 
 a {
+    font-family: "Open Sans Condensed", sans-serif;
+    font-weight: bold;
     padding: 15px;
+    color: $grey;
+
+    &.active,
+    &:hover {
+        color: $blue;
+    }
 }
 </style>

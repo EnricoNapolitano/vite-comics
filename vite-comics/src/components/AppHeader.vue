@@ -77,11 +77,11 @@ export default {
 
 nav {
     height: 120px;
-    @include flex-jsb-ac()
+    @include flex-jsb-ac;
 }
 
 ul {
-    @include flex-jsb
+    @include flex-jsb;
 }
 
 li {

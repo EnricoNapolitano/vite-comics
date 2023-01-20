@@ -18,7 +18,6 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/scss/partial/mixins.scss' as *;
-@use '../assets/scss/partial/variables.scss' as *;
 
 nav {
     height: 120px;

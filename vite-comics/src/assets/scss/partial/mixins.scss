@@ -1,0 +1,10 @@
+@mixin flex-jsb-ac {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin flex-jsb {
+    display: flex;
+    justify-content: space-between;
+}

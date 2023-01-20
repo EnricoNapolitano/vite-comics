@@ -1,64 +1,8 @@
 <script>
+import MainNav from './smaller_components/MainNav.vue'
 export default {
     name: 'AppHeader',
-    data() {
-        return {
-            // data structure of navbar in header
-            nav: [
-                {
-                    text: 'Characters',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Comics',
-                    url: '#',
-                    current: true,
-                },
-                {
-                    text: 'Movies',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'TV',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Games',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Collectibles',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Videos',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Fans',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'News',
-                    url: '#',
-                    current: false,
-                },
-                {
-                    text: 'Shop',
-                    url: '#',
-                    current: false,
-                },
-            ]
-
-        }
-    }
+    components: { MainNav }
 }
 </script>
 
@@ -67,9 +11,7 @@ export default {
         <!-- main navabar in header -->
         <nav>
             <figure><img src="../assets/img/dc-logo.png" alt="logo DC"></figure>
-            <ul>
-                <li v-for="el in nav" :key="el.text"><a href="#">{{ el.text }}</a></li>
-            </ul>
+            <main-nav></main-nav>
         </nav>
     </header>
 </template>
@@ -86,25 +28,5 @@ nav {
 figure {
     width: 85px;
     height: 85px;
-}
-
-ul {
-    @include flex-jsb; //display flex, justify content space between
-}
-
-li {
-    text-transform: uppercase;
-}
-
-a {
-    font-family: "Open Sans Condensed", sans-serif;
-    font-weight: bold;
-    padding: 15px;
-    color: $grey;
-
-    &.active,
-    &:hover {
-        color: $blue;
-    }
 }
 </style>

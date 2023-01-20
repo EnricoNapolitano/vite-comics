@@ -6,12 +6,20 @@
 }
 
 /* GENERICS */
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
 li {
     list-style: none;
 }
 
 a {
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* UTILS */

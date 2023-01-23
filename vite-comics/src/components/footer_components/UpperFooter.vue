@@ -194,6 +194,7 @@ export default {
     background-image: url('../../assets/img/footer-bg.jpg');
     background-size: cover;
     font-family: "Open Sans Condensed", sans-serif;
+    overflow-y: auto;
 
     figure {
         overflow: hidden;

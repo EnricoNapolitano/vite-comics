@@ -1,3 +1,5 @@
+@use './partial/mixins.scss' as *;
+
 /* RESET */
 * {
     margin: 0;
@@ -26,4 +28,20 @@ img {
 .container {
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-jsb-ac {
+    @include flex-jsb-ac; //flex justify-content space-between and align-items center
+}
+
+.flex-ac {
+    @include flex-ac; //flex align-items center
+}
+
+.flex-jc-ac {
+    @include flex-jc-ac; //flex justify-content center and align-items center
 }

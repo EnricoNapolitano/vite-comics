@@ -1,10 +1,27 @@
+@use './variables.scss' as *; //path for variables
+
 @mixin flex-jsb-ac {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+@mixin flex-jc-ac {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flex-jsb {
     display: flex;
     justify-content: space-between;
+}
+
+@mixin flex-ac {
+    display: flex;
+    align-items: center;
+}
+
+@mixin underline {
+    border-bottom: 5px solid $blue;
 }

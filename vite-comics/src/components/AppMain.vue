@@ -13,10 +13,14 @@ export default {
             <!-- component "ComicCard". Inside the string also the "comic" attribute to prepare the prop to pass -->
             <comic-card v-for="comic in comics" :key="comic.series" :comic="comic"></comic-card>
         </ul>
+        <div class="container flex-jc-ac">
+            <button>load more</button>
+        </div>
     </main>
 </template>
 
 <style lang="scss">
+@use '../assets/scss/partial/mixins.scss' as *;
 @use '../assets/scss/partial/variables.scss' as *;
 
 main {
@@ -30,6 +34,10 @@ main {
         li {
             flex-basis: calc(100% / 6);
         }
+    }
+
+    button {
+        @include button;
     }
 }
 </style>

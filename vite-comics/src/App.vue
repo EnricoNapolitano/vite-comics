@@ -1,5 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppJumbotron from './components/AppJumbotron.vue';
 import AppMain from './components/AppMain.vue';
 import BlueNav from './components/BlueNav.vue';
 import AppFooter from './components/AppFooter.vue';
@@ -96,13 +97,14 @@ export default {
       ],
     }
   },
-  components: { AppHeader, AppMain, BlueNav, AppFooter }
+  components: { AppHeader, AppJumbotron, AppMain, BlueNav, AppFooter }
 }
 </script>
 
 
 <template>
   <app-header></app-header>
+  <app-jumbotron></app-jumbotron>
   <!-- Passing comics data by prop to AppMain thanks to the attribute "comics" -->
   <app-main :comics="comics"></app-main>
   <blue-nav></blue-nav>

@@ -13,6 +13,11 @@ export default {
             <!-- component "ComicCard". Inside the string also the "comic" attribute to prepare the prop to pass -->
             <comic-card v-for="comic in comics" :key="comic.series" :comic="comic"></comic-card>
         </ul>
+        <div class="container flex js">
+            <div class="tag flex-jc-ac">
+                current series
+            </div>
+        </div>
         <div class="container flex-jc-ac">
             <button>load more</button>
         </div>
@@ -27,9 +32,17 @@ main {
     min-height: 130px;
     background-color: $black; //color from variablse.scss
     color: white;
+    position: relative;
+
+    .tag {
+        @include tag;
+        position: absolute;
+        top: 0;
+        transform: translateY(-50%);
+    }
 
     ul {
-        padding: 40px 0;
+        padding: 70px 0 20px 0;
 
         li {
             flex-basis: calc(100% / 6);

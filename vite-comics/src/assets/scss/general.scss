@@ -34,6 +34,10 @@ img {
     display: flex;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .flex-jsb-ac {
     @include flex-jsb-ac; //flex justify-content space-between and align-items center
 }

@@ -1,22 +1,35 @@
-<script></script>
+<script>
+import ComicCard from './smaller_components/ComicCard.vue';
+export default {
+    props: { comics: Array },
+    components: { ComicCard }
+}
+</script>
+
 <template>
-    <!-- Here will start the main -->
-    <div>
-        <!-- tag placeholder -->
-        <h1 class="container">-- Contents go here --</h1>
-    </div>
+
+    <main>
+        <ul class="container flex-jc-ac wrap">
+            <!-- component "ComicCard". Inside the string also the "comic" attribute to prepare the prop to pass -->
+            <comic-card v-for="comic in comics" :key="comic.series" :comic="comic"></comic-card>
+        </ul>
+    </main>
 </template>
-<style lang="scss" scoped>
+
+<style lang="scss">
 @use '../assets/scss/partial/variables.scss' as *;
 
-div {
-    height: 130px;
+main {
+    min-height: 130px;
     background-color: $black; //color from variablse.scss
     color: white;
-}
 
-//tag place holder
-h1 {
-    line-height: 130px;
+    ul {
+        padding: 40px 0;
+
+        li {
+            flex-basis: calc(100% / 6);
+        }
+    }
 }
 </style>

@@ -128,6 +128,29 @@ export default {
           current: false,
         },
       ],
+      //social icons list (those in the footer)
+      socialIcons: [
+        {
+          name: 'footer-facebook.png',
+          url: '#',
+        },
+        {
+          name: 'footer-twitter.png',
+          url: '#',
+        },
+        {
+          name: 'footer-youtube.png',
+          url: '#',
+        },
+        {
+          name: 'footer-pinterest.png',
+          url: '#',
+        },
+        {
+          name: 'footer-periscope.png',
+          url: '#',
+        },
+      ]
     }
   },
   components: { AppHeader, AppJumbotron, AppMain, CentralNav, AppFooter }
@@ -141,7 +164,7 @@ export default {
   <!-- Passing comics data by prop to AppMain thanks to the attribute "comics" -->
   <app-main :comics="comics"></app-main>
   <central-nav :nav="centralNav"></central-nav>
-  <app-footer></app-footer>
+  <app-footer :icons="socialIcons"></app-footer>
 </template>
 
 

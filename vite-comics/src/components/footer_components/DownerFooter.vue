@@ -1,33 +1,7 @@
 <script>
 export default {
     name: 'DownerFooter',
-    data() {
-        return {
-            //social icons list
-            socials: [
-                {
-                    name: 'footer-facebook.png',
-                    url: '#',
-                },
-                {
-                    name: 'footer-twitter.png',
-                    url: '#',
-                },
-                {
-                    name: 'footer-youtube.png',
-                    url: '#',
-                },
-                {
-                    name: 'footer-pinterest.png',
-                    url: '#',
-                },
-                {
-                    name: 'footer-periscope.png',
-                    url: '#',
-                },
-            ]
-        }
-    },
+    props: { icons: Array },
     methods: {
         //method to create path social icon
         buildIconPath(icon) {
@@ -45,8 +19,8 @@ export default {
                 <span>FOLLOW US</span>
                 <!-- social icons -->
                 <ul class="flex">
-                    <li v-for="social in socials">
-                        <a href="#"><img :src="buildIconPath(social.name)" alt="social icon"></a>
+                    <li v-for="icon in icons">
+                        <a href="#"><img :src="buildIconPath(icon.name)" alt="social icon"></a>
                     </li>
                 </ul>
             </div>

@@ -161,7 +161,7 @@ export default {
 <template>
   <app-header></app-header>
   <app-jumbotron></app-jumbotron>
-  <!-- Passing comics data by prop to AppMain thanks to the attribute "comics" -->
+  <!-- Passing datas by props thanks to the attributes -->
   <app-main :comics="comics"></app-main>
   <central-nav :nav="centralNav"></central-nav>
   <app-footer :icons="socialIcons"></app-footer>

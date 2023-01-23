@@ -55,15 +55,18 @@ export default {
                     url: '#',
                     current: false,
                 },
-            ]
-
+            ],
         }
     }
 }
 </script>
 <template>
-    <ul>
-        <li v-for="el in nav" :key="el.text"><a href="#">{{ el.text }}</a></li>
+    <ul class="flex-jsb-ac">
+        <!-- class active if current is true -->
+        <li :class="{ active: el.current }" class="flex-ac" v-for="el in nav" :key="el.text"><a :href="el.url">{{
+            el.text
+        }}</a>
+        </li>
     </ul>
 </template>
 <style lang="scss" scoped>
@@ -71,11 +74,21 @@ export default {
 @use '../../assets/scss/partial/variables.scss' as *;
 
 ul {
-    @include flex-jsb; //display flex, justify content space between
+    height: 100%;
 }
 
 li {
     text-transform: uppercase;
+    border: 5px solid transparent;
+    height: 100%;
+
+    &:hover {
+        @include underline;
+    }
+}
+
+li.active {
+    @include underline;
 }
 
 a {

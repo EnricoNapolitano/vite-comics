@@ -2,7 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppJumbotron from './components/AppJumbotron.vue';
 import AppMain from './components/AppMain.vue';
-import BlueNav from './components/BlueNav.vue';
+import CentralNav from './components/CentralNav.vue';
 import AppFooter from './components/AppFooter.vue';
 export default {
   name: 'DC Comics',
@@ -97,7 +97,7 @@ export default {
       ],
     }
   },
-  components: { AppHeader, AppJumbotron, AppMain, BlueNav, AppFooter }
+  components: { AppHeader, AppJumbotron, AppMain, CentralNav, AppFooter }
 }
 </script>
 
@@ -107,7 +107,7 @@ export default {
   <app-jumbotron></app-jumbotron>
   <!-- Passing comics data by prop to AppMain thanks to the attribute "comics" -->
   <app-main :comics="comics"></app-main>
-  <blue-nav></blue-nav>
+  <central-nav></central-nav>
   <app-footer></app-footer>
 </template>
 

@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: 'BlueNav',
+    name: 'CentralNav',
     data() {
         return {
             //navbar data structure
@@ -47,7 +47,7 @@ export default {
 }
 </script>
 <template>
-    <div class="blue-nav flex-jsb-ac">
+    <div class="central-nav flex-jsb-ac">
         <ul class="container flex-jsb-ac">
             <li v-for="el in nav" :key="el.text">
                 <a class="flex-jsb-ac" :href="el.url">
@@ -63,7 +63,7 @@ export default {
 <style lang="scss">
 @use '../assets/scss/partial/variables.scss' as *;
 
-.blue-nav {
+.central-nav {
     background-color: $blue;
     height: 155px;
 

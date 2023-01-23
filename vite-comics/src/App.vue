@@ -8,7 +8,7 @@ export default {
   name: 'DC Comics',
   data() {
     return {
-      // centralized comics' data
+      //comics' data for AppMain
       comics: [
         {
           thumb:

@@ -9,23 +9,24 @@ export default {
 <template>
     <header class="container">
         <!-- main navabar in header -->
-        <nav>
+        <nav class="flex-jsb-ac">
             <figure><img src="../assets/img/dc-logo.png" alt="logo DC"></figure>
             <main-nav></main-nav>
         </nav>
     </header>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use '../assets/scss/partial/mixins.scss' as *;
 
-nav {
-    height: 120px;
-    @include flex-jsb-ac; //display flex, justify content space between, align-itmes center
-}
+header {
+    nav {
+        height: 120px;
+    }
 
-figure {
-    width: 85px;
-    height: 85px;
+    figure {
+        width: 85px;
+        height: 85px;
+    }
 }
 </style>

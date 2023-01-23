@@ -25,3 +25,14 @@
 @mixin underline {
     border-bottom: 5px solid $blue;
 }
+
+@mixin button {
+    margin-bottom: 20px;
+    padding: 15px 60px;
+    color: white;
+    background-color: #0282f9;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    cursor: pointer;
+}

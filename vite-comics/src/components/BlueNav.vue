@@ -61,7 +61,6 @@ export default {
     </div>
 </template>
 <style lang="scss">
-@use '../assets/scss/partial/mixins.scss' as *;
 @use '../assets/scss/partial/variables.scss' as *;
 
 .blue-nav {
